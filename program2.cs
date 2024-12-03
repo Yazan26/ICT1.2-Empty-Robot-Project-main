@@ -26,11 +26,11 @@ class Program2
         // Handle control commands
         if (e.Message == "forward")
         {
-            Robot.Motors(200, 200);
+            Robot.Motors(200, 180);
         }
         else if (e.Message == "backward")
         {
-            Robot.Motors(-200, -200);
+            Robot.Motors(-200, -180);
         }
         else if (e.Message == "left")
         {
