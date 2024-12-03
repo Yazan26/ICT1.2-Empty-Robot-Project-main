@@ -1,6 +1,9 @@
 using System; 
 using System.Device.Gpio;
 using Avans.StatisticalRobot;
+using SimpleMqtt;
+using HiveMQtt.Client;
+using HiveMQtt.Client.Options;
 
 
 class Program {
@@ -25,14 +28,14 @@ while (true)
             // Add a small delay before turning
             Robot.Wait(500);
             // Turn around (e.g., rotate in place)
-            Robot.Motors(-200, 100); // One motor forward, one motor backward
+            Robot.Motors(-300, 100); // One motor forward, one motor backward
             Robot.Wait(1000); // Adjust the duration to complete the turn
             // Stop the motors after turning
             Robot.Motors(0, 0);
         }
         else
         {
-            Robot.Motors(200, 200); // Continue moving forward
+            Robot.Motors(300, 270); // Continue moving forward
         }
     }
     catch (System.IO.IOException ex)
