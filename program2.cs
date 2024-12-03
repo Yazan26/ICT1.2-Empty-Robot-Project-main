@@ -15,7 +15,7 @@ class Program2
 
         await mqttClient.SubscribeToTopic("robot/control");
 
-        // Keep the application running
+    
         Console.ReadLine();
     }
 
@@ -23,7 +23,7 @@ class Program2
     {
         Console.WriteLine($"Received message: {e.Message} on topic: {e.Topic}");
 
-        // Handle control commands
+        //hiermee bstuur ik die dinge via easymqtt
         if (e.Message == "forward")
         {
             Robot.Motors(200, 180);
